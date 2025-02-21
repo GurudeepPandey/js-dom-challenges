@@ -37,9 +37,15 @@ h1 {
   transition: all 0.3s ease;
 }
 
-.bulb.off {
+.off {
   background-color: #95a5a6;
   box-shadow: none;
+}
+
+.bulbon {
+  background-color: yellow;
+  box-shadow: 1px 1px 60px 10px yellow;
+  border: 1px solid #7f8c8d;
 }
 
 .bulb-base {
