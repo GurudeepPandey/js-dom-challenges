@@ -25,22 +25,22 @@ button {
   color: white;
 }
 
-#redButton {
+#red {
   background-color: #e74c3c;
 }
 
-#greenButton {
+#green {
   background-color: #2ecc71;
 }
 
-#blueButton {
+#blue {
   background-color: #3498db;
 }
 
-#purpleButton {
+#purple {
   background-color: #9b59b6;
 }
 
-#resetButton {
+#reset {
   background-color: #34495e;
 }
