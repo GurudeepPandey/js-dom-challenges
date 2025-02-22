@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: #f0f2f5;
+  background: #91add6;
 }
 
 .container {
@@ -79,3 +79,10 @@ h2 {
 .active .accordion-content {
   max-height: 200px;
 }
+
+/* .changeHeight {
+  max-height: 200px;
+}
+.arrowChange {
+  transform: rotate(180deg);
+} */
