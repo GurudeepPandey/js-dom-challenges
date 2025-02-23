@@ -5,7 +5,7 @@ const cartObj = {}
 
 function addToCart(item, itemprice) {
     if (cartObj[item]) {
-        priceUpdate(item, itemprice)
+        increasePrice(item, itemprice)
         return;
     }
     cartObj[item] = { quantity: 1, price: itemprice }
