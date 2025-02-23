@@ -27,24 +27,18 @@ h1 {
 .bulb {
   width: 80px;
   height: 80px;
-  background-color: #f1c40f;
+  background-color: #95a5a6;
   border-radius: 50%;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0 0 50px rgba(241, 196, 15, 0.5);
   transition: all 0.3s ease;
-}
-
-.off {
-  background-color: #95a5a6;
-  box-shadow: none;
 }
 
 .bulbon {
   background-color: yellow;
-  box-shadow: 1px 1px 60px 10px yellow;
+  box-shadow: 1px 1px 60px 30px yellow;
   border: 1px solid #7f8c8d;
 }
 

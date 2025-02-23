@@ -22,6 +22,7 @@ const btnclick = 0
 const body = document.querySelector("body");
 button.addEventListener("click", () => {
     const isDark = body.classList.toggle("dark-mode");
+    // console.log(isDark)
     bulb.classList.toggle("bulbon");
 
     button.innerText = isDark ? "Turn On" : "Turn Off";
