@@ -55,3 +55,14 @@ button {
   color: #666;
   padding: 20px;
 }
+
+#cart-items div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+#cart-items div div {
+  gap: 5px;
+}
