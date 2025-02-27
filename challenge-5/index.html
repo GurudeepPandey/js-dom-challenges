@@ -10,13 +10,14 @@
 
 <body>
   <h1>Image Carousel</h1>
-
+  
   <div class="carousel-container" id="carousel">
     <div class="carousel-track" id="carouselTrack">
       <!-- Images will be added dynamically -->
+      <img src="./Images/image1.avif" alt="" class="carousel-slide">
     </div>
 
-    <div class="carousel-caption" id="caption"></div>
+    <div class="carousel-caption" id="caption">Image 1</div>
 
     <button class="carousel-button prev-button" id="prevButton">←</button>
     <button class="carousel-button next-button" id="nextButton">→</button>
@@ -24,6 +25,10 @@
 
   <div class="carousel-nav" id="carouselNav">
     <!-- Indicators will be added dynamically -->
+     <div class="carousel-indicator active"></div>
+     <div class="carousel-indicator"></div>
+     <div class="carousel-indicator"></div>
+     <div class="carousel-indicator"></div>
   </div>
 
   <div class="auto-play-control">
@@ -35,5 +40,4 @@
 
   <script src="app.js"></script>
 </body>
-
 </html>
