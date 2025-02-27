@@ -6,12 +6,14 @@ const indicator = document.querySelectorAll(".carousel-indicator")
 const autoPlayBtn = document.querySelector(".auto-play-button")
 const timerDisplay = document.getElementById("timerDisplay")
 let imagesArr = [
-    {path: "./Images/image1.avif", cap: "Image1"},
-    {path: "./Images/image2.jpg", cap: "Image2"},
-    {path: "./Images/image3.jpg", cap: "Image3"},
-    {path: "./Images/image4.webp", cap: "Image4"}
+    {path: "./Images/image1.avif", cap: "Green Mountain"},
+    {path: "./Images/image2.jpg", cap: "Snowy Mountains"},
+    {path: "./Images/image3.jpg", cap: "Lake"},
+    {path: "./Images/image4.webp", cap: "Valley"}
 ]
 let index = 0
+let btnClick = false;
+let setTimeRef;
 let indicatorRef = indicator[0]
 
 
@@ -24,7 +26,26 @@ prevButton.addEventListener("click", function() {
 })
 
 autoPlayBtn.addEventListener("click", function() {
-    
+    let i = 3;
+    if(!btnClick) {
+        btnClick = true;
+        autoPlayBtn.innerText = "Stop Auto Play"
+        timerDisplay.innerText = `Next Slide in 4s`
+        setTimeRef = setInterval(() => {
+            timerDisplay.innerText = `Next Slide in ${i}s`
+            i--;
+            if(i<0) {
+                moveImages("right")
+                i = 4
+            }
+        }, 1000)
+    } else {
+        btnClick = false
+        autoPlayBtn.innerText = "Start Auto Play"
+        clearInterval(setTimeRef)
+        timerDisplay.innerText = ""
+    }
+
 })
 
 function moveImages(direction) {
