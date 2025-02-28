@@ -103,7 +103,7 @@ h2 {
 }
 
 .digital-clock {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
   padding: 20px 40px;
   background: rgba(0, 0, 0, 0.4);
@@ -118,6 +118,7 @@ h2 {
   font-size: 1.2rem;
   margin-top: 10px;
   opacity: 0.8;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
