@@ -6,10 +6,10 @@ const indicator = document.querySelectorAll(".carousel-indicator")
 const autoPlayBtn = document.querySelector(".auto-play-button")
 const timerDisplay = document.getElementById("timerDisplay")
 let imagesArr = [
-    {path: "./Images/image1.avif", cap: "Green Mountain"},
+    {path: "./Images/image1.avif", cap: "Green Feild"},
     {path: "./Images/image2.jpg", cap: "Snowy Mountains"},
-    {path: "./Images/image3.jpg", cap: "Lake"},
-    {path: "./Images/image4.webp", cap: "Valley"}
+    {path: "./Images/image3.jpg", cap: "Beautiful Lake"},
+    {path: "./Images/image4.webp", cap: " Green Valley"}
 ]
 let index = 0
 let btnClick = false;
@@ -35,6 +35,7 @@ autoPlayBtn.addEventListener("click", function() {
             timerDisplay.innerText = `Next Slide in ${i}s`
             i--;
             if(i<0) {
+                console.log("In setInterval")
                 moveImages("right")
                 i = 4
             }
@@ -49,7 +50,10 @@ autoPlayBtn.addEventListener("click", function() {
 })
 
 function moveImages(direction) {
-    if(index == 3 && direction == "right") {
+    if(typeof direction == "number") {
+        index = direction
+    }
+    else if(index == 3 && direction == "right") {
         index = 0
     }
     else if(index == 0 && direction == "left") {
@@ -67,3 +71,9 @@ function moveImages(direction) {
     indicator[index].classList.add("active")
     indicatorRef = indicator[index]
 }
+
+indicator.forEach( (item, index) => {
+    item.addEventListener("click", () => {
+        moveImages(index)
+    })
+})

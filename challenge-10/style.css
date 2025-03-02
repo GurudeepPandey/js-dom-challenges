@@ -65,3 +65,8 @@ button {
   border: none;
   border-radius: 4px;
 }
+
+.btn-cont {
+  display: flex;
+  gap: 200px;
+}
